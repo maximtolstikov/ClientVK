@@ -16,8 +16,8 @@ class AuthViewController: UIViewController {
     var isAuthorised = false
     var myToken: VKAccessToken? = nil
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
         let sdkInstance = VKSdk.initialize(withAppId: apid)
         
@@ -31,7 +31,7 @@ class AuthViewController: UIViewController {
                 self.isAuthorised = true
                 print("Authorized")
                 
-                self.performSegue(withIdentifier: "TabBarController", sender: nil)
+                self.goToTabBarController()
                 
             } else {
                 print("No authorized")
@@ -44,6 +44,16 @@ class AuthViewController: UIViewController {
         VKSdk.authorize(scope)
     }
     
+    func logout() {
+        
+        VKSdk.forceLogout()
+    }
+    
+    private func goToTabBarController() {
+        
+        self.performSegue(withIdentifier: "TabBarController", sender: nil)
+    }
+    
 }
 
 extension AuthViewController: VKSdkDelegate, VKSdkUIDelegate {
@@ -51,7 +61,6 @@ extension AuthViewController: VKSdkDelegate, VKSdkUIDelegate {
     func vkSdkAccessAuthorizationFinished(with result: VKAuthorizationResult!) {
         
         if (result.token != nil) {
-            
             print(VKSdk.accessToken().userId)
         } else {
             print("not token!")

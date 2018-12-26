@@ -13,7 +13,7 @@
         <!--Auth View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="AuthViewController" customModule="VK" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AuthViewController" id="BYZ-38-t0r" customClass="AuthViewController" customModule="VK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -36,7 +36,7 @@
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="Q37-WC-bct">
-                                        <rect key="frame" x="77.5" y="219.5" width="220" height="208"/>
+                                        <rect key="frame" x="77.5" y="213.5" width="220" height="220"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNF-yM-c2y">
                                                 <rect key="frame" x="0.0" y="0.0" width="220" height="95"/>
@@ -54,18 +54,17 @@
                                                     <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vBx-tu-S9a"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Регистрация" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jvo-YW-JKC">
-                                                <rect key="frame" x="64.5" y="190" width="91.5" height="18"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Scy-bI-yvq">
+                                                <rect key="frame" x="64" y="190" width="92" height="30"/>
+                                                <state key="normal" title="Регистрация">
+                                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="220" id="Hjb-6a-BGR"/>
                                             <constraint firstItem="B6I-9K-fXQ" firstAttribute="centerX" secondItem="Q37-WC-bct" secondAttribute="centerX" id="KAM-iN-v7t"/>
                                             <constraint firstItem="ZNF-yM-c2y" firstAttribute="leading" secondItem="Q37-WC-bct" secondAttribute="leading" id="Qzn-XV-x0h"/>
-                                            <constraint firstItem="Jvo-YW-JKC" firstAttribute="centerX" secondItem="Q37-WC-bct" secondAttribute="centerX" id="pXA-5S-Xrg"/>
                                             <constraint firstAttribute="trailing" secondItem="ZNF-yM-c2y" secondAttribute="trailing" id="uNW-g7-bFO"/>
                                         </constraints>
                                     </stackView>
@@ -117,10 +116,10 @@
             </objects>
             <point key="canvasLocation" x="2872.8000000000002" y="475.41229385307349"/>
         </scene>
-        <!--View Controller-->
+        <!--About Me View Controller-->
         <scene sceneID="yg2-Jh-5QA">
             <objects>
-                <viewController id="ztp-dy-9qD" sceneMemberID="viewController">
+                <viewController id="ztp-dy-9qD" customClass="AboutMeViewController" customModule="VK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FZu-nP-srV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -128,7 +127,11 @@
                         <viewLayoutGuide key="safeArea" id="AtW-n0-Oim"/>
                     </view>
                     <navigationItem key="navigationItem" id="9lc-4q-RJN">
-                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="JTY-Eh-5j5"/>
+                        <barButtonItem key="leftBarButtonItem" title="Выйти" id="JTY-Eh-5j5">
+                            <connections>
+                                <action selector="logout:" destination="ztp-dy-9qD" id="Gk7-ir-DJw"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T0Y-yw-2YR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -157,6 +160,7 @@
         <!--Мои друзья-->
         <scene sceneID="Pun-bE-zNo">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bc4-6M-svP" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="o5g-eS-HgE" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Мои друзья" id="haF-44-NFP"/>
                     <toolbarItems/>
@@ -169,7 +173,6 @@
                         <segue destination="51C-AK-s7c" kind="relationship" relationship="rootViewController" id="ncY-Mh-KOz"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Bc4-6M-svP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1933.5999999999999" y="475.41229385307349"/>
         </scene>
@@ -205,6 +208,7 @@
         <!--Мои группы-->
         <scene sceneID="fE5-bm-2X9">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cvJ-OL-zLg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="N3L-Ki-jNY" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Мои группы" id="3rI-4r-NXU"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lJj-xH-1yE">
@@ -215,13 +219,13 @@
                         <segue destination="McW-cv-2bP" kind="relationship" relationship="rootViewController" id="L4z-fj-vPp"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cvJ-OL-zLg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1024" y="1212"/>
         </scene>
         <!--Обо мне-->
         <scene sceneID="0bd-HW-cOb">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="82u-2m-TTP" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Mud-2B-O6L" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Обо мне" id="Bxy-TC-Qju"/>
                     <toolbarItems/>
@@ -234,7 +238,6 @@
                         <segue destination="ztp-dy-9qD" kind="relationship" relationship="rootViewController" id="T7Q-4E-N0c"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="82u-2m-TTP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1933.5999999999999" y="-190.25487256371815"/>
         </scene>
