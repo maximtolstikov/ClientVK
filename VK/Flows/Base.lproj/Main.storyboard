@@ -35,90 +35,50 @@
                                             <constraint firstAttribute="width" id="nzz-5U-ZD2"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNF-yM-c2y">
-                                        <rect key="frame" x="0.0" y="133" width="375" height="95"/>
-                                        <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="75"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="G9S-Zb-cnV">
-                                        <rect key="frame" x="67.5" y="260" width="240" height="127"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="Q37-WC-bct">
+                                        <rect key="frame" x="77.5" y="219.5" width="220" height="208"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Логин" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HQw-5E-isk">
-                                                <rect key="frame" x="0.0" y="0.0" width="240" height="21.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNF-yM-c2y">
+                                                <rect key="frame" x="0.0" y="0.0" width="220" height="95"/>
+                                                <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="75"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B6I-9K-fXQ">
+                                                <rect key="frame" x="76.5" y="122" width="67" height="41"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <state key="normal" title="Войти">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vBx-tu-S9a"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Регистрация" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jvo-YW-JKC">
+                                                <rect key="frame" x="64.5" y="190" width="91.5" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sg4-Je-uJe">
-                                                <rect key="frame" x="0.0" y="29.5" width="240" height="30"/>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пароль" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="60y-Gp-xmV">
-                                                <rect key="frame" x="0.0" y="67.5" width="240" height="21.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yrW-qs-CAW">
-                                                <rect key="frame" x="0.0" y="97" width="240" height="30"/>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                            </textField>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="Sg4-Je-uJe" secondAttribute="trailing" id="0VM-05-Xmi"/>
-                                            <constraint firstAttribute="trailing" secondItem="HQw-5E-isk" secondAttribute="trailing" id="29H-k5-33Q"/>
-                                            <constraint firstAttribute="trailing" secondItem="60y-Gp-xmV" secondAttribute="trailing" id="5NM-ls-XsK"/>
-                                            <constraint firstItem="60y-Gp-xmV" firstAttribute="centerX" secondItem="G9S-Zb-cnV" secondAttribute="centerX" id="Dce-ZV-wQR"/>
-                                            <constraint firstItem="HQw-5E-isk" firstAttribute="centerX" secondItem="G9S-Zb-cnV" secondAttribute="centerX" id="HEK-Ol-0CW"/>
-                                            <constraint firstItem="Sg4-Je-uJe" firstAttribute="centerX" secondItem="G9S-Zb-cnV" secondAttribute="centerX" id="MWh-rP-Bxv"/>
-                                            <constraint firstItem="yrW-qs-CAW" firstAttribute="leading" secondItem="G9S-Zb-cnV" secondAttribute="leading" id="gKH-nt-ogH"/>
-                                            <constraint firstItem="60y-Gp-xmV" firstAttribute="leading" secondItem="G9S-Zb-cnV" secondAttribute="leading" id="jbQ-Dt-wbD"/>
-                                            <constraint firstItem="Sg4-Je-uJe" firstAttribute="leading" secondItem="G9S-Zb-cnV" secondAttribute="leading" id="kBl-cK-J2e"/>
-                                            <constraint firstItem="HQw-5E-isk" firstAttribute="leading" secondItem="G9S-Zb-cnV" secondAttribute="leading" id="kxY-Dk-zf0"/>
-                                            <constraint firstAttribute="trailing" secondItem="yrW-qs-CAW" secondAttribute="trailing" id="s5y-Nm-wlV"/>
-                                            <constraint firstItem="yrW-qs-CAW" firstAttribute="centerX" secondItem="G9S-Zb-cnV" secondAttribute="centerX" id="sSW-3Y-ejL"/>
-                                            <constraint firstAttribute="width" constant="240" id="zZW-k4-m0l"/>
+                                            <constraint firstAttribute="width" constant="220" id="Hjb-6a-BGR"/>
+                                            <constraint firstItem="B6I-9K-fXQ" firstAttribute="centerX" secondItem="Q37-WC-bct" secondAttribute="centerX" id="KAM-iN-v7t"/>
+                                            <constraint firstItem="ZNF-yM-c2y" firstAttribute="leading" secondItem="Q37-WC-bct" secondAttribute="leading" id="Qzn-XV-x0h"/>
+                                            <constraint firstItem="Jvo-YW-JKC" firstAttribute="centerX" secondItem="Q37-WC-bct" secondAttribute="centerX" id="pXA-5S-Xrg"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZNF-yM-c2y" secondAttribute="trailing" id="uNW-g7-bFO"/>
                                         </constraints>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B6I-9K-fXQ">
-                                        <rect key="frame" x="154" y="419" width="67" height="41"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <state key="normal" title="Войти">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vBx-tu-S9a"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Регистрация" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jvo-YW-JKC">
-                                        <rect key="frame" x="142" y="492" width="91.5" height="18"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="Jvo-YW-JKC" firstAttribute="top" secondItem="B6I-9K-fXQ" secondAttribute="bottom" constant="32" id="6Na-qM-HhV"/>
-                                    <constraint firstItem="G9S-Zb-cnV" firstAttribute="top" secondItem="ZNF-yM-c2y" secondAttribute="bottom" constant="32" id="7I2-0K-v39"/>
                                     <constraint firstItem="J9B-lb-Zge" firstAttribute="top" secondItem="mkf-6u-Hmt" secondAttribute="top" id="9kg-zS-3mi"/>
                                     <constraint firstAttribute="trailing" secondItem="J9B-lb-Zge" secondAttribute="trailing" id="B9R-MA-f8M"/>
+                                    <constraint firstItem="Q37-WC-bct" firstAttribute="centerX" secondItem="mkf-6u-Hmt" secondAttribute="centerX" id="E9t-rm-LMZ"/>
                                     <constraint firstItem="cJz-vq-s5Z" firstAttribute="top" secondItem="J9B-lb-Zge" secondAttribute="bottom" id="KZR-hh-lVU"/>
-                                    <constraint firstItem="Jvo-YW-JKC" firstAttribute="centerX" secondItem="mkf-6u-Hmt" secondAttribute="centerX" id="MOD-hI-0ao"/>
-                                    <constraint firstItem="B6I-9K-fXQ" firstAttribute="centerX" secondItem="mkf-6u-Hmt" secondAttribute="centerX" id="OdP-aq-uCX"/>
-                                    <constraint firstItem="ZNF-yM-c2y" firstAttribute="centerX" secondItem="mkf-6u-Hmt" secondAttribute="centerX" id="Zzm-G4-yuO"/>
-                                    <constraint firstItem="G9S-Zb-cnV" firstAttribute="centerY" secondItem="mkf-6u-Hmt" secondAttribute="centerY" id="dkL-Ue-v1s"/>
+                                    <constraint firstItem="Q37-WC-bct" firstAttribute="centerY" secondItem="mkf-6u-Hmt" secondAttribute="centerY" id="S8w-HD-p4P"/>
                                     <constraint firstItem="cJz-vq-s5Z" firstAttribute="leading" secondItem="mkf-6u-Hmt" secondAttribute="leading" id="i5b-QI-PFb"/>
                                     <constraint firstAttribute="bottom" secondItem="cJz-vq-s5Z" secondAttribute="bottom" id="kRa-Da-tnb"/>
-                                    <constraint firstItem="B6I-9K-fXQ" firstAttribute="top" secondItem="G9S-Zb-cnV" secondAttribute="bottom" constant="32" id="oDL-L3-0HJ"/>
-                                    <constraint firstItem="ZNF-yM-c2y" firstAttribute="leading" secondItem="cJz-vq-s5Z" secondAttribute="trailing" id="ok9-zi-EON"/>
-                                    <constraint firstAttribute="trailing" secondItem="ZNF-yM-c2y" secondAttribute="trailing" id="pmL-tk-pGi"/>
                                     <constraint firstItem="J9B-lb-Zge" firstAttribute="leading" secondItem="mkf-6u-Hmt" secondAttribute="leading" id="san-Oi-LUF"/>
-                                    <constraint firstItem="G9S-Zb-cnV" firstAttribute="centerX" secondItem="mkf-6u-Hmt" secondAttribute="centerX" id="vak-Pb-ehz"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -134,10 +94,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="loginTextField" destination="Sg4-Je-uJe" id="3CM-tH-hdB"/>
-                        <outlet property="passwordTextField" destination="yrW-qs-CAW" id="2Si-hC-f50"/>
-                        <outlet property="scrollView" destination="mkf-6u-Hmt" id="vEb-fv-qyz"/>
-                        <segue destination="2VB-gm-1v7" kind="show" id="hin-qi-Zn8"/>
+                        <segue destination="2VB-gm-1v7" kind="show" identifier="TabBarController" id="hin-qi-Zn8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
