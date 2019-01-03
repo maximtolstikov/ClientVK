@@ -123,7 +123,29 @@
                     <view key="view" contentMode="scaleToFill" id="FZu-nP-srV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IEX-O8-44W">
+                                <rect key="frame" x="67.5" y="118" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="OKU-mV-dMW"/>
+                                    <constraint firstAttribute="height" constant="240" id="YXp-k3-pg8"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SXo-0G-l1Z">
+                                <rect key="frame" x="40" y="425" width="295" height="27.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="SXo-0G-l1Z" firstAttribute="leading" secondItem="AtW-n0-Oim" secondAttribute="leading" constant="40" id="3ux-n3-oC3"/>
+                            <constraint firstItem="AtW-n0-Oim" firstAttribute="trailing" secondItem="SXo-0G-l1Z" secondAttribute="trailing" constant="40" id="6i7-Ry-tDI"/>
+                            <constraint firstItem="IEX-O8-44W" firstAttribute="centerX" secondItem="FZu-nP-srV" secondAttribute="centerX" id="Lfw-LR-z81"/>
+                            <constraint firstItem="IEX-O8-44W" firstAttribute="top" secondItem="AtW-n0-Oim" secondAttribute="top" constant="54" id="Zqf-gs-1ci"/>
+                            <constraint firstItem="SXo-0G-l1Z" firstAttribute="top" secondItem="IEX-O8-44W" secondAttribute="bottom" constant="67" id="pBx-NW-dGo"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="AtW-n0-Oim"/>
                     </view>
                     <navigationItem key="navigationItem" id="9lc-4q-RJN">
@@ -133,6 +155,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="IEX-O8-44W" id="aEU-WL-UI0"/>
+                        <outlet property="nameLable" destination="SXo-0G-l1Z" id="exE-j9-KFK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T0Y-yw-2YR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -160,7 +186,6 @@
         <!--Мои друзья-->
         <scene sceneID="Pun-bE-zNo">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Bc4-6M-svP" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="o5g-eS-HgE" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Мои друзья" id="haF-44-NFP"/>
                     <toolbarItems/>
@@ -173,6 +198,7 @@
                         <segue destination="51C-AK-s7c" kind="relationship" relationship="rootViewController" id="ncY-Mh-KOz"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bc4-6M-svP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1933.5999999999999" y="475.41229385307349"/>
         </scene>
@@ -208,7 +234,6 @@
         <!--Мои группы-->
         <scene sceneID="fE5-bm-2X9">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cvJ-OL-zLg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="N3L-Ki-jNY" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Мои группы" id="3rI-4r-NXU"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lJj-xH-1yE">
@@ -219,13 +244,13 @@
                         <segue destination="McW-cv-2bP" kind="relationship" relationship="rootViewController" id="L4z-fj-vPp"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cvJ-OL-zLg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1024" y="1212"/>
         </scene>
         <!--Обо мне-->
         <scene sceneID="0bd-HW-cOb">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="82u-2m-TTP" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Mud-2B-O6L" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Обо мне" id="Bxy-TC-Qju"/>
                     <toolbarItems/>
@@ -238,6 +263,7 @@
                         <segue destination="ztp-dy-9qD" kind="relationship" relationship="rootViewController" id="T7Q-4E-N0c"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="82u-2m-TTP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1933.5999999999999" y="-190.25487256371815"/>
         </scene>

@@ -8,15 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		1D00B7E52CB12D1B9042B5AE /* Pods_VK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6FE2864446B0FE3CDDAB8EC /* Pods_VK.framework */; };
+		9419D9CC21DDF05C00E2DC08 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9419D9CB21DDF05C00E2DC08 /* ApiManager.swift */; };
+		9419D9CE21DDF4D700E2DC08 /* ErrorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9419D9CD21DDF4D700E2DC08 /* ErrorManager.swift */; };
+		9419D9D121DE159A00E2DC08 /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9419D9D021DE159A00E2DC08 /* RequestType.swift */; };
 		944A687C21D3DC180004B02D /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944A687B21D3DC180004B02D /* AboutMeViewController.swift */; };
 		94D0AAC421D353E1004ECBDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D0AAC321D353E1004ECBDA /* AppDelegate.swift */; };
 		94D0AAC621D353E1004ECBDA /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D0AAC521D353E1004ECBDA /* AuthViewController.swift */; };
 		94D0AAC921D353E1004ECBDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94D0AAC721D353E1004ECBDA /* Main.storyboard */; };
 		94D0AACB21D353E2004ECBDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94D0AACA21D353E2004ECBDA /* Assets.xcassets */; };
 		94D0AACE21D353E2004ECBDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94D0AACC21D353E2004ECBDA /* LaunchScreen.storyboard */; };
+		94E771BD21D538BA00AE8632 /* LoadUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E771BC21D538BA00AE8632 /* LoadUserData.swift */; };
+		94E771BF21D548CD00AE8632 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E771BE21D548CD00AE8632 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9419D9CB21DDF05C00E2DC08 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		9419D9CD21DDF4D700E2DC08 /* ErrorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorManager.swift; sourceTree = "<group>"; };
+		9419D9D021DE159A00E2DC08 /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
 		944A687B21D3DC180004B02D /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
 		94D0AAC021D353E1004ECBDA /* VK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94D0AAC321D353E1004ECBDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -25,6 +33,8 @@
 		94D0AACA21D353E2004ECBDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94D0AACD21D353E2004ECBDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94D0AACF21D353E2004ECBDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94E771BC21D538BA00AE8632 /* LoadUserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadUserData.swift; sourceTree = "<group>"; };
+		94E771BE21D548CD00AE8632 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9ED2FE472DDD3FC23E07AFB2 /* Pods-VK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VK.release.xcconfig"; path = "Pods/Target Support Files/Pods-VK/Pods-VK.release.xcconfig"; sourceTree = "<group>"; };
 		A04C96CE9B946209924A9AE6 /* Pods-VK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VK/Pods-VK.debug.xcconfig"; sourceTree = "<group>"; };
 		C6FE2864446B0FE3CDDAB8EC /* Pods_VK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +58,15 @@
 				C6FE2864446B0FE3CDDAB8EC /* Pods_VK.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9419D9C421DDE2DD00E2DC08 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9419D9CB21DDF05C00E2DC08 /* ApiManager.swift */,
+				9419D9CD21DDF4D700E2DC08 /* ErrorManager.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		94D0AAB721D353E1004ECBDA = {
@@ -85,6 +104,7 @@
 			children = (
 				94D0AADA21D39F9C004ECBDA /* BussinessLogic */,
 				94D0AAC321D353E1004ECBDA /* AppDelegate.swift */,
+				94E771C021D5559D00AE8632 /* Entitys */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -92,6 +112,7 @@
 		94D0AAD621D39A6E004ECBDA /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				9419D9C421DDE2DD00E2DC08 /* Network */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -126,8 +147,18 @@
 		94D0AADA21D39F9C004ECBDA /* BussinessLogic */ = {
 			isa = PBXGroup;
 			children = (
+				94E771BC21D538BA00AE8632 /* LoadUserData.swift */,
+				9419D9D021DE159A00E2DC08 /* RequestType.swift */,
 			);
 			path = BussinessLogic;
+			sourceTree = "<group>";
+		};
+		94E771C021D5559D00AE8632 /* Entitys */ = {
+			isa = PBXGroup;
+			children = (
+				94E771BE21D548CD00AE8632 /* User.swift */,
+			);
+			path = Entitys;
 			sourceTree = "<group>";
 		};
 		AD0E1EAC1EA6C6E01CFC8FD7 /* Pods */ = {
@@ -215,10 +246,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-VK/Pods-VK-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/VK-ios-sdk/VK_ios_sdk.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VK_ios_sdk.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,7 +286,12 @@
 			files = (
 				94D0AAC621D353E1004ECBDA /* AuthViewController.swift in Sources */,
 				944A687C21D3DC180004B02D /* AboutMeViewController.swift in Sources */,
+				9419D9CE21DDF4D700E2DC08 /* ErrorManager.swift in Sources */,
+				94E771BD21D538BA00AE8632 /* LoadUserData.swift in Sources */,
+				94E771BF21D548CD00AE8632 /* User.swift in Sources */,
+				9419D9CC21DDF05C00E2DC08 /* ApiManager.swift in Sources */,
 				94D0AAC421D353E1004ECBDA /* AppDelegate.swift in Sources */,
+				9419D9D121DE159A00E2DC08 /* RequestType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

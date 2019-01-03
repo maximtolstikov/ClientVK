@@ -11,10 +11,27 @@ import VK_ios_sdk
 
 class AboutMeViewController: UIViewController {
 
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var nameLable: UILabel!
+    
+    let service = LoadUserData()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        service.fetchUserData { [weak self] (result) in
+            switch result {
+            case .Success(let user):
+                self?.updateDataFor(user: user)
+            case .Failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    private func updateDataFor(user: User) {
         
+        nameLable.text = user.fullName
     }
     
     @IBAction func logout(_ sender: UIBarButtonItem) {
