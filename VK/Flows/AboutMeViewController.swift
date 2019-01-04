@@ -30,7 +30,6 @@ class AboutMeViewController: UIViewController {
     }
     
     private func updateDataFor(user: User) {
-        
         nameLable.text = user.fullName
     }
     

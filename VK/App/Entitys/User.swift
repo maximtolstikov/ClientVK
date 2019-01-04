@@ -6,7 +6,7 @@
 //  Copyright © 2018 Maxim Tolstikov. All rights reserved.
 //
 
-struct User: Codable {
+struct User: Decodable {
     
     var id: Int
     var firstName: String
@@ -22,7 +22,7 @@ struct User: Codable {
     }
 }
 
-struct UserService: Codable {
+struct UserService: Decodable {
     
     let response: [User]
 }
