@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 class LoadUserData: ApiManager {
     
@@ -23,7 +24,34 @@ class LoadUserData: ApiManager {
         self.init(sessionConfiguration: URLSessionConfiguration.default)
     }
     
-    func fetchUserData(completionHandler: @escaping (ApiResult<User>) -> Void) {
+    func load() {
+        
+        fetchUserData { [weak self] (result) in
+            
+            switch result {
+            case .Success(let user):
+                self?.saveToBase(user: user)
+            case .Failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    private func saveToBase(user: User) {
+        
+        do {
+            let realm = try Realm()
+            print(realm.configuration.fileURL?.absoluteString ?? "")
+            
+            try realm.write {
+                realm.add(user, update: true)
+            }
+        } catch (let error) {
+            print(error.localizedDescription)
+        }
+    }
+    
+    private func fetchUserData(completionHandler: @escaping (ApiResult<User>) -> Void) {
         
         guard let request = RequestType.UserData().request else {
             assertionFailure()
@@ -34,6 +62,7 @@ class LoadUserData: ApiManager {
             do {
                 let responseInfo = try JSONDecoder().decode(UserService.self, from: data)
                 let user = responseInfo.response.first
+                
                 return user
                 
             } catch (let error) {
@@ -43,5 +72,5 @@ class LoadUserData: ApiManager {
             
         }, completionHandler: completionHandler)
     }
-
+    
 }

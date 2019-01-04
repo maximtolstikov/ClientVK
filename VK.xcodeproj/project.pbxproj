@@ -12,6 +12,8 @@
 		9419D9CE21DDF4D700E2DC08 /* ErrorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9419D9CD21DDF4D700E2DC08 /* ErrorManager.swift */; };
 		9419D9D121DE159A00E2DC08 /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9419D9D021DE159A00E2DC08 /* RequestType.swift */; };
 		944A687C21D3DC180004B02D /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944A687B21D3DC180004B02D /* AboutMeViewController.swift */; };
+		948E88CE21DF6D4800A658AD /* UpdateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948E88CD21DF6D4800A658AD /* UpdateManager.swift */; };
+		948E88D121DF9B3500A658AD /* GetCacheImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948E88D021DF9B3500A658AD /* GetCacheImage.swift */; };
 		94D0AAC421D353E1004ECBDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D0AAC321D353E1004ECBDA /* AppDelegate.swift */; };
 		94D0AAC621D353E1004ECBDA /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D0AAC521D353E1004ECBDA /* AuthViewController.swift */; };
 		94D0AAC921D353E1004ECBDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94D0AAC721D353E1004ECBDA /* Main.storyboard */; };
@@ -26,6 +28,8 @@
 		9419D9CD21DDF4D700E2DC08 /* ErrorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorManager.swift; sourceTree = "<group>"; };
 		9419D9D021DE159A00E2DC08 /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
 		944A687B21D3DC180004B02D /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
+		948E88CD21DF6D4800A658AD /* UpdateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateManager.swift; sourceTree = "<group>"; };
+		948E88D021DF9B3500A658AD /* GetCacheImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCacheImage.swift; sourceTree = "<group>"; };
 		94D0AAC021D353E1004ECBDA /* VK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94D0AAC321D353E1004ECBDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94D0AAC521D353E1004ECBDA /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +71,23 @@
 				9419D9CD21DDF4D700E2DC08 /* ErrorManager.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		948E88CC21DF6D1E00A658AD /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				94E771BC21D538BA00AE8632 /* LoadUserData.swift */,
+				9419D9D021DE159A00E2DC08 /* RequestType.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		948E88CF21DF9A9200A658AD /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				948E88D021DF9B3500A658AD /* GetCacheImage.swift */,
+			);
+			path = Cache;
 			sourceTree = "<group>";
 		};
 		94D0AAB721D353E1004ECBDA = {
@@ -147,8 +168,9 @@
 		94D0AADA21D39F9C004ECBDA /* BussinessLogic */ = {
 			isa = PBXGroup;
 			children = (
-				94E771BC21D538BA00AE8632 /* LoadUserData.swift */,
-				9419D9D021DE159A00E2DC08 /* RequestType.swift */,
+				948E88CF21DF9A9200A658AD /* Cache */,
+				948E88CC21DF6D1E00A658AD /* Network */,
+				948E88CD21DF6D4800A658AD /* UpdateManager.swift */,
 			);
 			path = BussinessLogic;
 			sourceTree = "<group>";
@@ -294,6 +316,8 @@
 				9419D9CC21DDF05C00E2DC08 /* ApiManager.swift in Sources */,
 				94D0AAC421D353E1004ECBDA /* AppDelegate.swift in Sources */,
 				9419D9D121DE159A00E2DC08 /* RequestType.swift in Sources */,
+				948E88CE21DF6D4800A658AD /* UpdateManager.swift in Sources */,
+				948E88D121DF9B3500A658AD /* GetCacheImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

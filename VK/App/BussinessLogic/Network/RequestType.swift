@@ -36,7 +36,7 @@ enum RequestType: FinalURLPoint {
         switch self {
         case .UserData():
             let method = "users.get"
-            let parametrs = "photo_100"
+            let parametrs = "photo_200"
             return "/method/\(method)?user_id=\(id)&access_token=\(token)&fields=\(parametrs)\(self.version)"
         }
     }
