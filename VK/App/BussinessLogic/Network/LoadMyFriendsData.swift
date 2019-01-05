@@ -1,15 +1,15 @@
 //
-//  NetworkService.swift
+//  LoadMyFriendsData.swift
 //  VK
 //
-//  Created by Maxim Tolstikov on 27/12/2018.
-//  Copyright © 2018 Maxim Tolstikov. All rights reserved.
+//  Created by Maxim Tolstikov on 05/01/2019.
+//  Copyright © 2019 Maxim Tolstikov. All rights reserved.
 //
 
 import Foundation
 import RealmSwift
 
-class LoadUserData: ApiManager {
+class LoadMyFriendsData: ApiManager {
     
     var sessionConfiguration: URLSessionConfiguration
     lazy var session: URLSession = {
@@ -26,44 +26,44 @@ class LoadUserData: ApiManager {
     
     func load() {
         
-        fetchUserData { [weak self] (result) in
+        fetchFriendsData { [weak self] (result) in
             
             switch result {
-            case .Success(let user):
-                self?.saveToBase(user: user)
+            case .Success(let users):
+                self?.saveToBase(friends: users)
             case .Failure(let error):
                 print(error.localizedDescription)
             }
         }
     }
     
-    private func saveToBase(user: User) {
+    private func saveToBase(friends: [User]) {
         
         do {
             let realm = try Realm()
             print(realm.configuration.fileURL?.absoluteString ?? "")
             
             try realm.write {
-                realm.add(user, update: true)
+                realm.add(friends, update: true)
             }
         } catch (let error) {
             print(error.localizedDescription)
         }
     }
     
-    private func fetchUserData(completionHandler: @escaping (ApiResult<User>) -> Void) {
+    private func fetchFriendsData(completionHandler: @escaping (ApiResult<[User]>) -> Void) {
         
-        guard let request = RequestType.UserData().request else {
+        guard let request = RequestType.myFriends.request else {
             assertionFailure()
             return }
         
-        fetch(request: request, parse: { (data) -> User? in
+        fetch(request: request, parse: { (data) -> [User]? in
             
             do {
-                let responseInfo = try JSONDecoder().decode(UserService.self, from: data)
-                let user = responseInfo.response.first
+                let responseInfo = try JSONDecoder().decode(FriendsService.self, from: data)
+                let users = responseInfo.response.users
                 
-                return user
+                return users
                 
             } catch (let error) {
                 print(error.localizedDescription)
@@ -74,3 +74,4 @@ class LoadUserData: ApiManager {
     }
     
 }
+

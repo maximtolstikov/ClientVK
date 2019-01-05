@@ -19,8 +19,14 @@
 		94D0AAC921D353E1004ECBDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94D0AAC721D353E1004ECBDA /* Main.storyboard */; };
 		94D0AACB21D353E2004ECBDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94D0AACA21D353E2004ECBDA /* Assets.xcassets */; };
 		94D0AACE21D353E2004ECBDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94D0AACC21D353E2004ECBDA /* LaunchScreen.storyboard */; };
-		94E771BD21D538BA00AE8632 /* LoadUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E771BC21D538BA00AE8632 /* LoadUserData.swift */; };
+		94E771BD21D538BA00AE8632 /* LoadMyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E771BC21D538BA00AE8632 /* LoadMyData.swift */; };
 		94E771BF21D548CD00AE8632 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E771BE21D548CD00AE8632 /* User.swift */; };
+		94F656C921E085C7005D4EE3 /* MyFriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F656C821E085C7005D4EE3 /* MyFriendsTableViewController.swift */; };
+		94F656CB21E085FB005D4EE3 /* MyFriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F656CA21E085FB005D4EE3 /* MyFriendsTableViewCell.swift */; };
+		94F656CE21E0865E005D4EE3 /* MyGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F656CD21E0865E005D4EE3 /* MyGroupTableViewCell.swift */; };
+		94F656D021E08676005D4EE3 /* MyGroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F656CF21E08676005D4EE3 /* MyGroupTableViewController.swift */; };
+		94F656D321E0A7F5005D4EE3 /* LoadMyFriendsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F656D221E0A7F5005D4EE3 /* LoadMyFriendsData.swift */; };
+		94F656D521E0ACE2005D4EE3 /* FriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F656D421E0ACE2005D4EE3 /* FriendViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,8 +43,14 @@
 		94D0AACA21D353E2004ECBDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94D0AACD21D353E2004ECBDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94D0AACF21D353E2004ECBDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		94E771BC21D538BA00AE8632 /* LoadUserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadUserData.swift; sourceTree = "<group>"; };
+		94E771BC21D538BA00AE8632 /* LoadMyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMyData.swift; sourceTree = "<group>"; };
 		94E771BE21D548CD00AE8632 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		94F656C821E085C7005D4EE3 /* MyFriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsTableViewController.swift; sourceTree = "<group>"; };
+		94F656CA21E085FB005D4EE3 /* MyFriendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsTableViewCell.swift; sourceTree = "<group>"; };
+		94F656CD21E0865E005D4EE3 /* MyGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupTableViewCell.swift; sourceTree = "<group>"; };
+		94F656CF21E08676005D4EE3 /* MyGroupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupTableViewController.swift; sourceTree = "<group>"; };
+		94F656D221E0A7F5005D4EE3 /* LoadMyFriendsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMyFriendsData.swift; sourceTree = "<group>"; };
+		94F656D421E0ACE2005D4EE3 /* FriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewController.swift; sourceTree = "<group>"; };
 		9ED2FE472DDD3FC23E07AFB2 /* Pods-VK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VK.release.xcconfig"; path = "Pods/Target Support Files/Pods-VK/Pods-VK.release.xcconfig"; sourceTree = "<group>"; };
 		A04C96CE9B946209924A9AE6 /* Pods-VK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VK/Pods-VK.debug.xcconfig"; sourceTree = "<group>"; };
 		C6FE2864446B0FE3CDDAB8EC /* Pods_VK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,7 +88,8 @@
 		948E88CC21DF6D1E00A658AD /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				94E771BC21D538BA00AE8632 /* LoadUserData.swift */,
+				94E771BC21D538BA00AE8632 /* LoadMyData.swift */,
+				94F656D221E0A7F5005D4EE3 /* LoadMyFriendsData.swift */,
 				9419D9D021DE159A00E2DC08 /* RequestType.swift */,
 			);
 			path = Network;
@@ -141,9 +154,11 @@
 		94D0AAD721D39A7D004ECBDA /* Flows */ = {
 			isa = PBXGroup;
 			children = (
-				94D0AAC721D353E1004ECBDA /* Main.storyboard */,
-				94D0AAC521D353E1004ECBDA /* AuthViewController.swift */,
 				944A687B21D3DC180004B02D /* AboutMeViewController.swift */,
+				94D0AAC521D353E1004ECBDA /* AuthViewController.swift */,
+				94D0AAC721D353E1004ECBDA /* Main.storyboard */,
+				94F656CC21E08607005D4EE3 /* MyFriends */,
+				94F656D121E0867F005D4EE3 /* MyGroup */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -181,6 +196,25 @@
 				94E771BE21D548CD00AE8632 /* User.swift */,
 			);
 			path = Entitys;
+			sourceTree = "<group>";
+		};
+		94F656CC21E08607005D4EE3 /* MyFriends */ = {
+			isa = PBXGroup;
+			children = (
+				94F656D421E0ACE2005D4EE3 /* FriendViewController.swift */,
+				94F656C821E085C7005D4EE3 /* MyFriendsTableViewController.swift */,
+				94F656CA21E085FB005D4EE3 /* MyFriendsTableViewCell.swift */,
+			);
+			path = MyFriends;
+			sourceTree = "<group>";
+		};
+		94F656D121E0867F005D4EE3 /* MyGroup */ = {
+			isa = PBXGroup;
+			children = (
+				94F656CD21E0865E005D4EE3 /* MyGroupTableViewCell.swift */,
+				94F656CF21E08676005D4EE3 /* MyGroupTableViewController.swift */,
+			);
+			path = MyGroup;
 			sourceTree = "<group>";
 		};
 		AD0E1EAC1EA6C6E01CFC8FD7 /* Pods */ = {
@@ -308,13 +342,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94F656D021E08676005D4EE3 /* MyGroupTableViewController.swift in Sources */,
 				94D0AAC621D353E1004ECBDA /* AuthViewController.swift in Sources */,
 				944A687C21D3DC180004B02D /* AboutMeViewController.swift in Sources */,
+				94F656C921E085C7005D4EE3 /* MyFriendsTableViewController.swift in Sources */,
+				94F656CB21E085FB005D4EE3 /* MyFriendsTableViewCell.swift in Sources */,
 				9419D9CE21DDF4D700E2DC08 /* ErrorManager.swift in Sources */,
-				94E771BD21D538BA00AE8632 /* LoadUserData.swift in Sources */,
+				94E771BD21D538BA00AE8632 /* LoadMyData.swift in Sources */,
 				94E771BF21D548CD00AE8632 /* User.swift in Sources */,
 				9419D9CC21DDF05C00E2DC08 /* ApiManager.swift in Sources */,
 				94D0AAC421D353E1004ECBDA /* AppDelegate.swift in Sources */,
+				94F656D321E0A7F5005D4EE3 /* LoadMyFriendsData.swift in Sources */,
+				94F656CE21E0865E005D4EE3 /* MyGroupTableViewCell.swift in Sources */,
+				94F656D521E0ACE2005D4EE3 /* FriendViewController.swift in Sources */,
 				9419D9D121DE159A00E2DC08 /* RequestType.swift in Sources */,
 				948E88CE21DF6D4800A658AD /* UpdateManager.swift in Sources */,
 				948E88D121DF9B3500A658AD /* GetCacheImage.swift in Sources */,

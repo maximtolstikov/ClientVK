@@ -1,0 +1,27 @@
+//
+//  MyFriendsTableViewCell.swift
+//  VK
+//
+//  Created by Maxim Tolstikov on 05/01/2019.
+//  Copyright © 2019 Maxim Tolstikov. All rights reserved.
+//
+
+import UIKit
+
+class MyFriendsTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var avatarImage: UIImageView!
+    @IBOutlet weak var nameLable: UILabel!
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
+    }
+
+}

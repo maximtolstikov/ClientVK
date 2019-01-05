@@ -11,7 +11,9 @@ import VK_ios_sdk
 
 enum RequestType: FinalURLPoint {    
     
-    case UserData()
+    case aboutMe
+    case myFriends
+    case myGroups
     
     var id: NSNumber? {
         return VKSdk.accessToken()?.localUser.id
@@ -33,11 +35,21 @@ enum RequestType: FinalURLPoint {
             assertionFailure()
             return nil }
         
+        print("token: \(token)")
+        
         switch self {
-        case .UserData():
+        case .aboutMe:
             let method = "users.get"
-            let parametrs = "photo_200"
-            return "/method/\(method)?user_id=\(id)&access_token=\(token)&fields=\(parametrs)\(self.version)"
+            let fields = "photo_50,photo_200_orig,photo_400_orig"
+            return "/method/\(method)?user_id=\(id)&access_token=\(token)&fields=\(fields)\(self.version)"
+        case .myFriends:
+            let method = "friends.get"
+            let fields = "photo_50,photo_200_orig,photo_400_orig"
+            return "/method/\(method)?user_id=\(id)&access_token=\(token)&fields=\(fields)\(self.version)"
+        case .myGroups:
+            let method = "users.get"
+            let fields = "photo_200"
+            return "/method/\(method)?user_id=\(id)&access_token=\(token)&fields=\(fields)\(self.version)"
         }
     }
     var request: URLRequest? {
