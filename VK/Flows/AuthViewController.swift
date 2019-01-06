@@ -45,7 +45,10 @@ class AuthViewController: UIViewController {
     }
     
     func logout() {
+       
+        guard let manager = RealmManager() else { return }
         
+        manager.deleteAll()
         VKSdk.forceLogout()
     }
     

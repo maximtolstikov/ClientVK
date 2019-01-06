@@ -39,16 +39,9 @@ class LoadMyData: ApiManager {
     
     private func saveToBase(user: User) {
         
-        do {
-            let realm = try Realm()
-            print(realm.configuration.fileURL?.absoluteString ?? "")
-            
-            try realm.write {
-                realm.add(user, update: true)
-            }
-        } catch (let error) {
-            print(error.localizedDescription)
-        }
+        guard let realmManager = RealmManager() else { return }
+        
+        realmManager.saveObject(user)
     }
     
     private func fetchUserData(completionHandler: @escaping (ApiResult<User>) -> Void) {

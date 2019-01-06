@@ -33,29 +33,27 @@ class AboutMeViewController: UIViewController {
         
         guard let idUser = VKSdk.accessToken()?.localUser.id.stringValue else { return }
         
-        do {
-            let realm = try Realm()
-            print(realm.configuration.fileURL?.absoluteString ?? "")
-            let predicate = NSPredicate(format: "id = %@", idUser)
-            let result = realm.objects(User.self).filter(predicate)
-            token = result.observe({ [weak self] (change) in
-                switch change {
-                case .update:
-                    guard let user = result.first else { return }
-                    self?.updateData(user: user)
-                    self?.token = nil
-                default: break
-                }
-            })
-            
-            if let user = result.first {                
-                updateData(user: user)
-            } else {
-                service.load()
+        
+        let predicate = NSPredicate(format: "id = %@", idUser)
+        
+        guard let realmManager = RealmManager(),
+            let result = realmManager.loadDataBy(type: User.self,
+                                                   predicate: predicate) else { return }
+        
+        token = result.observe({ [weak self] (change) in
+            switch change {
+            case .update:
+                guard let user = result.first else { return }
+                self?.updateData(user: user)
+                self?.token = nil
+            default: break
             }
-            
-        } catch (let error) {
-            print(error.localizedDescription)
+        })
+        
+        if let user = result.first {
+            updateData(user: user)
+        } else {
+            service.load()
         }
     }
     
@@ -78,8 +76,6 @@ class AboutMeViewController: UIViewController {
             .instantiateViewController(withIdentifier: "AuthViewController") as! AuthViewController
         controller.logout()
         present(controller, animated: true, completion: nil)
-        
-        // TODO: - сделать отчистку Realm
     }
     
 }

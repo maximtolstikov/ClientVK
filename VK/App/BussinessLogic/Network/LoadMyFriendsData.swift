@@ -24,13 +24,14 @@ class LoadMyFriendsData: ApiManager {
         self.init(sessionConfiguration: URLSessionConfiguration.default)
     }
     
-    func load() {
+    func load(completionHandler: @escaping () -> Void) {
         
         fetchFriendsData { [weak self] (result) in
             
             switch result {
             case .Success(let users):
                 self?.saveToBase(friends: users)
+                completionHandler()
             case .Failure(let error):
                 print(error.localizedDescription)
             }
@@ -39,16 +40,9 @@ class LoadMyFriendsData: ApiManager {
     
     private func saveToBase(friends: [User]) {
         
-        do {
-            let realm = try Realm()
-            print(realm.configuration.fileURL?.absoluteString ?? "")
-            
-            try realm.write {
-                realm.add(friends, update: true)
-            }
-        } catch (let error) {
-            print(error.localizedDescription)
-        }
+        let realmManager = RealmManager()
+        
+        realmManager?.saveCollection(friends)
     }
     
     private func fetchFriendsData(completionHandler: @escaping (ApiResult<[User]>) -> Void) {
@@ -61,7 +55,7 @@ class LoadMyFriendsData: ApiManager {
             
             do {
                 let responseInfo = try JSONDecoder().decode(FriendsService.self, from: data)
-                let users = responseInfo.response.users
+                let users = responseInfo.response.items
                 
                 return users
                 

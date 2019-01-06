@@ -12,6 +12,8 @@
 		9419D9CE21DDF4D700E2DC08 /* ErrorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9419D9CD21DDF4D700E2DC08 /* ErrorManager.swift */; };
 		9419D9D121DE159A00E2DC08 /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9419D9D021DE159A00E2DC08 /* RequestType.swift */; };
 		944A687C21D3DC180004B02D /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944A687B21D3DC180004B02D /* AboutMeViewController.swift */; };
+		947080B621E1C88D00EB7774 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947080B521E1C88D00EB7774 /* AvatarView.swift */; };
+		947080B921E1D64000EB7774 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947080B821E1D64000EB7774 /* RealmManager.swift */; };
 		948E88CE21DF6D4800A658AD /* UpdateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948E88CD21DF6D4800A658AD /* UpdateManager.swift */; };
 		948E88D121DF9B3500A658AD /* GetCacheImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948E88D021DF9B3500A658AD /* GetCacheImage.swift */; };
 		94D0AAC421D353E1004ECBDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D0AAC321D353E1004ECBDA /* AppDelegate.swift */; };
@@ -27,6 +29,7 @@
 		94F656D021E08676005D4EE3 /* MyGroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F656CF21E08676005D4EE3 /* MyGroupTableViewController.swift */; };
 		94F656D321E0A7F5005D4EE3 /* LoadMyFriendsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F656D221E0A7F5005D4EE3 /* LoadMyFriendsData.swift */; };
 		94F656D521E0ACE2005D4EE3 /* FriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F656D421E0ACE2005D4EE3 /* FriendViewController.swift */; };
+		94F656D721E0EF8F005D4EE3 /* SetImageToRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F656D621E0EF8F005D4EE3 /* SetImageToRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,8 @@
 		9419D9CD21DDF4D700E2DC08 /* ErrorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorManager.swift; sourceTree = "<group>"; };
 		9419D9D021DE159A00E2DC08 /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
 		944A687B21D3DC180004B02D /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
+		947080B521E1C88D00EB7774 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		947080B821E1D64000EB7774 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		948E88CD21DF6D4800A658AD /* UpdateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateManager.swift; sourceTree = "<group>"; };
 		948E88D021DF9B3500A658AD /* GetCacheImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCacheImage.swift; sourceTree = "<group>"; };
 		94D0AAC021D353E1004ECBDA /* VK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VK.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +56,7 @@
 		94F656CF21E08676005D4EE3 /* MyGroupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupTableViewController.swift; sourceTree = "<group>"; };
 		94F656D221E0A7F5005D4EE3 /* LoadMyFriendsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMyFriendsData.swift; sourceTree = "<group>"; };
 		94F656D421E0ACE2005D4EE3 /* FriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewController.swift; sourceTree = "<group>"; };
+		94F656D621E0EF8F005D4EE3 /* SetImageToRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetImageToRow.swift; sourceTree = "<group>"; };
 		9ED2FE472DDD3FC23E07AFB2 /* Pods-VK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VK.release.xcconfig"; path = "Pods/Target Support Files/Pods-VK/Pods-VK.release.xcconfig"; sourceTree = "<group>"; };
 		A04C96CE9B946209924A9AE6 /* Pods-VK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VK/Pods-VK.debug.xcconfig"; sourceTree = "<group>"; };
 		C6FE2864446B0FE3CDDAB8EC /* Pods_VK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +89,22 @@
 				9419D9CD21DDF4D700E2DC08 /* ErrorManager.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		947080B421E1C83300EB7774 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				947080B521E1C88D00EB7774 /* AvatarView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		947080B721E1D61700EB7774 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				947080B821E1D64000EB7774 /* RealmManager.swift */,
+			);
+			path = Realm;
 			sourceTree = "<group>";
 		};
 		948E88CC21DF6D1E00A658AD /* Network */ = {
@@ -159,6 +181,7 @@
 				94D0AAC721D353E1004ECBDA /* Main.storyboard */,
 				94F656CC21E08607005D4EE3 /* MyFriends */,
 				94F656D121E0867F005D4EE3 /* MyGroup */,
+				947080B421E1C83300EB7774 /* Views */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -183,6 +206,7 @@
 		94D0AADA21D39F9C004ECBDA /* BussinessLogic */ = {
 			isa = PBXGroup;
 			children = (
+				947080B721E1D61700EB7774 /* Realm */,
 				948E88CF21DF9A9200A658AD /* Cache */,
 				948E88CC21DF6D1E00A658AD /* Network */,
 				948E88CD21DF6D4800A658AD /* UpdateManager.swift */,
@@ -204,6 +228,7 @@
 				94F656D421E0ACE2005D4EE3 /* FriendViewController.swift */,
 				94F656C821E085C7005D4EE3 /* MyFriendsTableViewController.swift */,
 				94F656CA21E085FB005D4EE3 /* MyFriendsTableViewCell.swift */,
+				94F656D621E0EF8F005D4EE3 /* SetImageToRow.swift */,
 			);
 			path = MyFriends;
 			sourceTree = "<group>";
@@ -342,15 +367,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94F656D721E0EF8F005D4EE3 /* SetImageToRow.swift in Sources */,
 				94F656D021E08676005D4EE3 /* MyGroupTableViewController.swift in Sources */,
 				94D0AAC621D353E1004ECBDA /* AuthViewController.swift in Sources */,
 				944A687C21D3DC180004B02D /* AboutMeViewController.swift in Sources */,
 				94F656C921E085C7005D4EE3 /* MyFriendsTableViewController.swift in Sources */,
 				94F656CB21E085FB005D4EE3 /* MyFriendsTableViewCell.swift in Sources */,
 				9419D9CE21DDF4D700E2DC08 /* ErrorManager.swift in Sources */,
+				947080B621E1C88D00EB7774 /* AvatarView.swift in Sources */,
 				94E771BD21D538BA00AE8632 /* LoadMyData.swift in Sources */,
 				94E771BF21D548CD00AE8632 /* User.swift in Sources */,
 				9419D9CC21DDF05C00E2DC08 /* ApiManager.swift in Sources */,
+				947080B921E1D64000EB7774 /* RealmManager.swift in Sources */,
 				94D0AAC421D353E1004ECBDA /* AppDelegate.swift in Sources */,
 				94F656D321E0A7F5005D4EE3 /* LoadMyFriendsData.swift in Sources */,
 				94F656CE21E0865E005D4EE3 /* MyGroupTableViewCell.swift in Sources */,

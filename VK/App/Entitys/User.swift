@@ -78,6 +78,6 @@ struct FriendsService: Decodable {
     let response: Items
     
     struct Items: Decodable {
-        let users: [User]
+        let items: [User]
     }
 }
