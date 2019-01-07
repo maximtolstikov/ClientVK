@@ -9,7 +9,7 @@
 import RealmSwift
 
 /// Управляет методами Realm
-class RealmManager {
+struct RealmManager: AbstractRealmManager {
     
     private let realm: Realm
     
@@ -17,7 +17,7 @@ class RealmManager {
         self.realm = try! Realm(configuration: configuration)
     }
     
-    convenience init?() {
+    init?() {
         self.init(configuration: Realm.Configuration.defaultConfiguration)
         print(realm.configuration.fileURL?.absoluteString ?? "")
     }

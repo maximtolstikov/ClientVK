@@ -15,7 +15,8 @@ class AboutMeViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLable: UILabel!
     
-    let service = LoadMyData()
+    var service: AbstractLoadData?
+    var realm: AbstractRealmManager?
     var token: NotificationToken?
     let queue: OperationQueue = {
         let queue = OperationQueue()
@@ -32,11 +33,8 @@ class AboutMeViewController: UIViewController {
     private func loadData() {
         
         guard let idUser = VKSdk.accessToken()?.localUser.id.stringValue else { return }
-        
-        
         let predicate = NSPredicate(format: "id = %@", idUser)
-        
-        guard let realmManager = RealmManager(),
+        guard let realmManager = realm,
             let result = realmManager.loadDataBy(type: User.self,
                                                    predicate: predicate) else { return }
         
@@ -53,12 +51,11 @@ class AboutMeViewController: UIViewController {
         if let user = result.first {
             updateData(user: user)
         } else {
-            service.load()
+            service?.load {}
         }
     }
     
     private func updateData(user: User) {
-        
         nameLable.text = user.fullName
         
         let getCacheImage = GetCacheImage(url: user.photo200)

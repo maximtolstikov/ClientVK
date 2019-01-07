@@ -12,7 +12,8 @@ import VK_ios_sdk
 
 class MyFriendsTableViewController: UITableViewController {
     
-    let service = LoadMyFriendsData()
+    var service: AbstractLoadData?
+    var realm: AbstractRealmManager?
     var friends = [User]()
     let queue: OperationQueue = {
         let queue = OperationQueue()
@@ -23,7 +24,7 @@ class MyFriendsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        service.load {
+        service?.load {
             self.updateData()
         }        
     }
@@ -34,8 +35,8 @@ class MyFriendsTableViewController: UITableViewController {
 
         let predicate = NSPredicate(format: "id != %@", idUser)
    
-        guard let realmManager = RealmManager(),
-            let result = realmManager.loadDataBy(type: User.self,
+        guard let realm = realm,
+            let result = realm.loadDataBy(type: User.self,
                                                  predicate: predicate) else { return }
         
         friends = Array(result)

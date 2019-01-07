@@ -9,22 +9,22 @@
 import Foundation
 import RealmSwift
 
-class LoadMyData: ApiManager {
+class LoadMyData: AbstractLoadData {
     
     var sessionConfiguration: URLSessionConfiguration
     lazy var session: URLSession = {
         return URLSession(configuration: sessionConfiguration)
     }()
     
-    init(sessionConfiguration: URLSessionConfiguration) {
+    required init(sessionConfiguration: URLSessionConfiguration) {
         self.sessionConfiguration = sessionConfiguration
     }
     
-    convenience init() {
+    required convenience init() {
         self.init(sessionConfiguration: URLSessionConfiguration.default)
     }
     
-    func load() {
+    func load(completionHandler: @escaping () -> Void) {
         
         fetchUserData { [weak self] (result) in
             

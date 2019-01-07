@@ -21,6 +21,11 @@
 		94D0AAC921D353E1004ECBDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94D0AAC721D353E1004ECBDA /* Main.storyboard */; };
 		94D0AACB21D353E2004ECBDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94D0AACA21D353E2004ECBDA /* Assets.xcassets */; };
 		94D0AACE21D353E2004ECBDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94D0AACC21D353E2004ECBDA /* LaunchScreen.storyboard */; };
+		94DA7E7C21E36A300086C993 /* AbstractRealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DA7E7B21E36A300086C993 /* AbstractRealmManager.swift */; };
+		94DA7E7E21E36DAF0086C993 /* SwinjectStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DA7E7D21E36DAF0086C993 /* SwinjectStoryboard+Extension.swift */; };
+		94DA7E8021E37E190086C993 /* AbstractLoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DA7E7F21E37E190086C993 /* AbstractLoadData.swift */; };
+		94DA7E8221E3999C0086C993 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DA7E8121E3999C0086C993 /* Group.swift */; };
+		94DA7E8421E399F40086C993 /* LoadMyGroupsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DA7E8321E399F40086C993 /* LoadMyGroupsData.swift */; };
 		94E771BD21D538BA00AE8632 /* LoadMyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E771BC21D538BA00AE8632 /* LoadMyData.swift */; };
 		94E771BF21D548CD00AE8632 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E771BE21D548CD00AE8632 /* User.swift */; };
 		94F656C921E085C7005D4EE3 /* MyFriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F656C821E085C7005D4EE3 /* MyFriendsTableViewController.swift */; };
@@ -48,6 +53,11 @@
 		94D0AACA21D353E2004ECBDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94D0AACD21D353E2004ECBDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94D0AACF21D353E2004ECBDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94DA7E7B21E36A300086C993 /* AbstractRealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractRealmManager.swift; sourceTree = "<group>"; };
+		94DA7E7D21E36DAF0086C993 /* SwinjectStoryboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwinjectStoryboard+Extension.swift"; sourceTree = "<group>"; };
+		94DA7E7F21E37E190086C993 /* AbstractLoadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractLoadData.swift; sourceTree = "<group>"; };
+		94DA7E8121E3999C0086C993 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		94DA7E8321E399F40086C993 /* LoadMyGroupsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMyGroupsData.swift; sourceTree = "<group>"; };
 		94E771BC21D538BA00AE8632 /* LoadMyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMyData.swift; sourceTree = "<group>"; };
 		94E771BE21D548CD00AE8632 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		94F656C821E085C7005D4EE3 /* MyFriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsTableViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				947080B821E1D64000EB7774 /* RealmManager.swift */,
+				94DA7E7B21E36A300086C993 /* AbstractRealmManager.swift */,
 			);
 			path = Realm;
 			sourceTree = "<group>";
@@ -110,8 +121,10 @@
 		948E88CC21DF6D1E00A658AD /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				94DA7E7F21E37E190086C993 /* AbstractLoadData.swift */,
 				94E771BC21D538BA00AE8632 /* LoadMyData.swift */,
 				94F656D221E0A7F5005D4EE3 /* LoadMyFriendsData.swift */,
+				94DA7E8321E399F40086C993 /* LoadMyGroupsData.swift */,
 				9419D9D021DE159A00E2DC08 /* RequestType.swift */,
 			);
 			path = Network;
@@ -159,8 +172,9 @@
 			isa = PBXGroup;
 			children = (
 				94D0AADA21D39F9C004ECBDA /* BussinessLogic */,
-				94D0AAC321D353E1004ECBDA /* AppDelegate.swift */,
 				94E771C021D5559D00AE8632 /* Entitys */,
+				94D0AAC321D353E1004ECBDA /* AppDelegate.swift */,
+				94DA7E7D21E36DAF0086C993 /* SwinjectStoryboard+Extension.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -218,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				94E771BE21D548CD00AE8632 /* User.swift */,
+				94DA7E8121E3999C0086C993 /* Group.swift */,
 			);
 			path = Entitys;
 			sourceTree = "<group>";
@@ -236,8 +251,8 @@
 		94F656D121E0867F005D4EE3 /* MyGroup */ = {
 			isa = PBXGroup;
 			children = (
-				94F656CD21E0865E005D4EE3 /* MyGroupTableViewCell.swift */,
 				94F656CF21E08676005D4EE3 /* MyGroupTableViewController.swift */,
+				94F656CD21E0865E005D4EE3 /* MyGroupTableViewCell.swift */,
 			);
 			path = MyGroup;
 			sourceTree = "<group>";
@@ -329,12 +344,18 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-VK/Pods-VK-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
+				"${BUILT_PRODUCTS_DIR}/SwinjectAutoregistration/SwinjectAutoregistration.framework",
+				"${BUILT_PRODUCTS_DIR}/SwinjectStoryboard/SwinjectStoryboard.framework",
 				"${BUILT_PRODUCTS_DIR}/VK-ios-sdk/VK_ios_sdk.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectAutoregistration.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectStoryboard.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VK_ios_sdk.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,9 +393,12 @@
 				94D0AAC621D353E1004ECBDA /* AuthViewController.swift in Sources */,
 				944A687C21D3DC180004B02D /* AboutMeViewController.swift in Sources */,
 				94F656C921E085C7005D4EE3 /* MyFriendsTableViewController.swift in Sources */,
+				94DA7E8421E399F40086C993 /* LoadMyGroupsData.swift in Sources */,
+				94DA7E7C21E36A300086C993 /* AbstractRealmManager.swift in Sources */,
 				94F656CB21E085FB005D4EE3 /* MyFriendsTableViewCell.swift in Sources */,
 				9419D9CE21DDF4D700E2DC08 /* ErrorManager.swift in Sources */,
 				947080B621E1C88D00EB7774 /* AvatarView.swift in Sources */,
+				94DA7E7E21E36DAF0086C993 /* SwinjectStoryboard+Extension.swift in Sources */,
 				94E771BD21D538BA00AE8632 /* LoadMyData.swift in Sources */,
 				94E771BF21D548CD00AE8632 /* User.swift in Sources */,
 				9419D9CC21DDF05C00E2DC08 /* ApiManager.swift in Sources */,
@@ -382,7 +406,9 @@
 				94D0AAC421D353E1004ECBDA /* AppDelegate.swift in Sources */,
 				94F656D321E0A7F5005D4EE3 /* LoadMyFriendsData.swift in Sources */,
 				94F656CE21E0865E005D4EE3 /* MyGroupTableViewCell.swift in Sources */,
+				94DA7E8021E37E190086C993 /* AbstractLoadData.swift in Sources */,
 				94F656D521E0ACE2005D4EE3 /* FriendViewController.swift in Sources */,
+				94DA7E8221E3999C0086C993 /* Group.swift in Sources */,
 				9419D9D121DE159A00E2DC08 /* RequestType.swift in Sources */,
 				948E88CE21DF6D4800A658AD /* UpdateManager.swift in Sources */,
 				948E88D121DF9B3500A658AD /* GetCacheImage.swift in Sources */,

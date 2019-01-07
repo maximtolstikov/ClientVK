@@ -40,16 +40,16 @@ enum RequestType: FinalURLPoint {
         switch self {
         case .aboutMe:
             let method = "users.get"
-            let fields = "photo_50,photo_200_orig,photo_400_orig"
-            return "/method/\(method)?user_id=\(id)&access_token=\(token)&fields=\(fields)\(self.version)"
+            let parameters = "&fields=photo_50,photo_200_orig,photo_400_orig"
+            return "/method/\(method)?user_id=\(id)&access_token=\(token)\(parameters)\(self.version)"
         case .myFriends:
             let method = "friends.get"
-            let fields = "photo_50,photo_200_orig,photo_400_orig"
-            return "/method/\(method)?user_id=\(id)&access_token=\(token)&fields=\(fields)\(self.version)"
+            let parameters = "&fields=photo_50,photo_200_orig,photo_400_orig"
+            return "/method/\(method)?user_id=\(id)&access_token=\(token)\(parameters)\(self.version)"
         case .myGroups:
-            let method = "users.get"
-            let fields = "photo_200"
-            return "/method/\(method)?user_id=\(id)&access_token=\(token)&fields=\(fields)\(self.version)"
+            let method = "groups.get"
+            let parameters = "&extended=1"
+            return "/method/\(method)?user_id=\(id)&access_token=\(token)\(parameters)\(self.version)"
         }
     }
     var request: URLRequest? {
