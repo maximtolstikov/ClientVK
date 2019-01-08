@@ -27,8 +27,8 @@ import RealmSwift
         case photo400 = "photo_400_orig"
     }
     
-    required init(from decoder: Decoder) throws
-    {
+    required init(from decoder: Decoder) throws {
+        
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
         let idJson = try container.decode(Int.self, forKey: .id)

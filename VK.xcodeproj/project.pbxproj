@@ -26,12 +26,13 @@
 		94DA7E8021E37E190086C993 /* AbstractLoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DA7E7F21E37E190086C993 /* AbstractLoadData.swift */; };
 		94DA7E8221E3999C0086C993 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DA7E8121E3999C0086C993 /* Group.swift */; };
 		94DA7E8421E399F40086C993 /* LoadMyGroupsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DA7E8321E399F40086C993 /* LoadMyGroupsData.swift */; };
+		94DA7E8621E3B5E40086C993 /* SetImageToFriendRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DA7E8521E3B5E40086C993 /* SetImageToFriendRow.swift */; };
 		94E771BD21D538BA00AE8632 /* LoadMyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E771BC21D538BA00AE8632 /* LoadMyData.swift */; };
 		94E771BF21D548CD00AE8632 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E771BE21D548CD00AE8632 /* User.swift */; };
 		94F656C921E085C7005D4EE3 /* MyFriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F656C821E085C7005D4EE3 /* MyFriendsTableViewController.swift */; };
 		94F656CB21E085FB005D4EE3 /* MyFriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F656CA21E085FB005D4EE3 /* MyFriendsTableViewCell.swift */; };
 		94F656CE21E0865E005D4EE3 /* MyGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F656CD21E0865E005D4EE3 /* MyGroupTableViewCell.swift */; };
-		94F656D021E08676005D4EE3 /* MyGroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F656CF21E08676005D4EE3 /* MyGroupTableViewController.swift */; };
+		94F656D021E08676005D4EE3 /* MyGroupsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F656CF21E08676005D4EE3 /* MyGroupsTableViewController.swift */; };
 		94F656D321E0A7F5005D4EE3 /* LoadMyFriendsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F656D221E0A7F5005D4EE3 /* LoadMyFriendsData.swift */; };
 		94F656D521E0ACE2005D4EE3 /* FriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F656D421E0ACE2005D4EE3 /* FriendViewController.swift */; };
 		94F656D721E0EF8F005D4EE3 /* SetImageToRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F656D621E0EF8F005D4EE3 /* SetImageToRow.swift */; };
@@ -58,12 +59,13 @@
 		94DA7E7F21E37E190086C993 /* AbstractLoadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractLoadData.swift; sourceTree = "<group>"; };
 		94DA7E8121E3999C0086C993 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		94DA7E8321E399F40086C993 /* LoadMyGroupsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMyGroupsData.swift; sourceTree = "<group>"; };
+		94DA7E8521E3B5E40086C993 /* SetImageToFriendRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetImageToFriendRow.swift; sourceTree = "<group>"; };
 		94E771BC21D538BA00AE8632 /* LoadMyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMyData.swift; sourceTree = "<group>"; };
 		94E771BE21D548CD00AE8632 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		94F656C821E085C7005D4EE3 /* MyFriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsTableViewController.swift; sourceTree = "<group>"; };
 		94F656CA21E085FB005D4EE3 /* MyFriendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsTableViewCell.swift; sourceTree = "<group>"; };
 		94F656CD21E0865E005D4EE3 /* MyGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupTableViewCell.swift; sourceTree = "<group>"; };
-		94F656CF21E08676005D4EE3 /* MyGroupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupTableViewController.swift; sourceTree = "<group>"; };
+		94F656CF21E08676005D4EE3 /* MyGroupsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupsTableViewController.swift; sourceTree = "<group>"; };
 		94F656D221E0A7F5005D4EE3 /* LoadMyFriendsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMyFriendsData.swift; sourceTree = "<group>"; };
 		94F656D421E0ACE2005D4EE3 /* FriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewController.swift; sourceTree = "<group>"; };
 		94F656D621E0EF8F005D4EE3 /* SetImageToRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetImageToRow.swift; sourceTree = "<group>"; };
@@ -251,8 +253,9 @@
 		94F656D121E0867F005D4EE3 /* MyGroup */ = {
 			isa = PBXGroup;
 			children = (
-				94F656CF21E08676005D4EE3 /* MyGroupTableViewController.swift */,
+				94F656CF21E08676005D4EE3 /* MyGroupsTableViewController.swift */,
 				94F656CD21E0865E005D4EE3 /* MyGroupTableViewCell.swift */,
+				94DA7E8521E3B5E40086C993 /* SetImageToFriendRow.swift */,
 			);
 			path = MyGroup;
 			sourceTree = "<group>";
@@ -389,7 +392,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				94F656D721E0EF8F005D4EE3 /* SetImageToRow.swift in Sources */,
-				94F656D021E08676005D4EE3 /* MyGroupTableViewController.swift in Sources */,
+				94F656D021E08676005D4EE3 /* MyGroupsTableViewController.swift in Sources */,
 				94D0AAC621D353E1004ECBDA /* AuthViewController.swift in Sources */,
 				944A687C21D3DC180004B02D /* AboutMeViewController.swift in Sources */,
 				94F656C921E085C7005D4EE3 /* MyFriendsTableViewController.swift in Sources */,
@@ -412,6 +415,7 @@
 				9419D9D121DE159A00E2DC08 /* RequestType.swift in Sources */,
 				948E88CE21DF6D4800A658AD /* UpdateManager.swift in Sources */,
 				948E88D121DF9B3500A658AD /* GetCacheImage.swift in Sources */,
+				94DA7E8621E3B5E40086C993 /* SetImageToFriendRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

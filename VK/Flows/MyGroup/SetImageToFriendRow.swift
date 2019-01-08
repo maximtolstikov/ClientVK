@@ -1,20 +1,20 @@
 //
-//  SetImageToRow.swift
+//  SetImageToFriendRow.swift
 //  VK
 //
-//  Created by Maxim Tolstikov on 05/01/2019.
+//  Created by Maxim Tolstikov on 07/01/2019.
 //  Copyright © 2019 Maxim Tolstikov. All rights reserved.
 //
 
 import UIKit
 
-class SetImageToFriendRow: Operation {
+class SetImageToGroupRow: Operation {
     
     private let indexPath: IndexPath
     private weak var tableView: UITableView?
-    private var cell: MyFriendsTableViewCell?
+    private var cell: MyGroupTableViewCell?
     
-    init(cell: MyFriendsTableViewCell,
+    init(cell: MyGroupTableViewCell,
          indexPath: IndexPath,
          tableView: UITableView) {
         
@@ -32,9 +32,9 @@ class SetImageToFriendRow: Operation {
         
         if let newIndexPath = tableView.indexPath(for: cell),
             newIndexPath == indexPath {
-            cell.avatarImage.image = image
+            cell.groupImage.image = image
         } else if tableView.indexPath(for: cell) == nil {
-            cell.avatarImage.image = image
+            cell.groupImage.image = image
         }
     }
 }

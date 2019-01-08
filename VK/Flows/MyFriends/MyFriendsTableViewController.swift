@@ -32,7 +32,6 @@ class MyFriendsTableViewController: UITableViewController {
     private func updateData() {
         
         guard let idUser = VKSdk.accessToken()?.localUser.id.stringValue else { return }
-
         let predicate = NSPredicate(format: "id != %@", idUser)
    
         guard let realm = realm,
@@ -56,7 +55,7 @@ class MyFriendsTableViewController: UITableViewController {
         
         let urlPhoto = friends[indexPath.row].photo50
         let getCacheImage = GetCacheImage(url: urlPhoto)
-        let setImageToRow = SetImageToRow(cell: cell,
+        let setImageToRow = SetImageToFriendRow(cell: cell,
                                           indexPath: indexPath,
                                           tableView: tableView)
         setImageToRow.addDependency(getCacheImage)

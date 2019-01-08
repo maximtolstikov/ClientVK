@@ -186,7 +186,7 @@
             </objects>
             <point key="canvasLocation" x="1933.5999999999999" y="475.41229385307349"/>
         </scene>
-        <!--My Friends Table View Controller-->
+        <!--My Friends-->
         <scene sceneID="vqd-tY-90O">
             <objects>
                 <tableViewController id="7MU-5b-P6d" customClass="MyFriendsTableViewController" customModule="VK" customModuleProvider="target" sceneMemberID="viewController">
@@ -236,7 +236,7 @@
                             <outlet property="delegate" destination="7MU-5b-P6d" id="0Pd-Oe-8MB"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="X4P-1w-kGf"/>
+                    <navigationItem key="navigationItem" title="My Friends" id="X4P-1w-kGf"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ahl-eM-g6f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -273,22 +273,48 @@
             </objects>
             <point key="canvasLocation" x="3687" y="475"/>
         </scene>
-        <!--Root View Controller-->
+        <!--My Groups-->
         <scene sceneID="0fb-mT-iVE">
             <objects>
-                <tableViewController id="McW-cv-2bP" customClass="MyGroupTableViewController" customModule="VK" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zRa-5q-8s2">
+                <tableViewController id="McW-cv-2bP" customClass="MyGroupsTableViewController" customModule="VK" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zRa-5q-8s2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyGroupTableViewCell" id="vJ2-95-bBo" customClass="MyGroupTableViewCell" customModule="VK" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vJ2-95-bBo" id="j2B-AL-wTg">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="It5-Fe-s5i">
+                                            <rect key="frame" x="16" y="5" width="50" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="Qfc-Qz-Prl"/>
+                                                <constraint firstAttribute="height" constant="50" id="ojc-e4-6DV"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJT-RW-bht">
+                                            <rect key="frame" x="82" y="18" width="261" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="xJT-RW-bht" secondAttribute="trailing" constant="16" id="33l-ag-Z7e"/>
+                                        <constraint firstItem="It5-Fe-s5i" firstAttribute="leading" secondItem="j2B-AL-wTg" secondAttribute="leading" constant="16" id="RGc-YD-0cm"/>
+                                        <constraint firstItem="It5-Fe-s5i" firstAttribute="centerY" secondItem="j2B-AL-wTg" secondAttribute="centerY" id="hd5-Xv-OXr"/>
+                                        <constraint firstItem="xJT-RW-bht" firstAttribute="centerY" secondItem="j2B-AL-wTg" secondAttribute="centerY" id="pP0-rd-h6a"/>
+                                        <constraint firstItem="xJT-RW-bht" firstAttribute="leading" secondItem="It5-Fe-s5i" secondAttribute="trailing" constant="16" id="zl9-db-yG3"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="groupImage" destination="It5-Fe-s5i" id="xv6-L0-Gvc"/>
+                                    <outlet property="nameLable" destination="xJT-RW-bht" id="8DI-gP-hOJ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -296,11 +322,11 @@
                             <outlet property="delegate" destination="McW-cv-2bP" id="kbd-Ip-6Vm"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="5fA-vt-O1i"/>
+                    <navigationItem key="navigationItem" title="My Groups" id="5fA-vt-O1i"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DuK-WX-bdk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1975" y="1212"/>
+            <point key="canvasLocation" x="1973.5999999999999" y="1211.2443778110946"/>
         </scene>
         <!--Мои группы-->
         <scene sceneID="fE5-bm-2X9">

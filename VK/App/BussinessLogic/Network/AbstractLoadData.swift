@@ -9,8 +9,9 @@ import Foundation
 
 protocol AbstractLoadData: ApiManager {
     
-    init(sessionConfiguration: URLSessionConfiguration)
-    init()
+    init(sessionConfiguration: URLSessionConfiguration,
+         realm: AbstractRealmManager)
+    init(realm: AbstractRealmManager)
     
     func load(completionHandler: @escaping () -> Void)
 }

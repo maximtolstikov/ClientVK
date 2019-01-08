@@ -12,16 +12,19 @@ import RealmSwift
 class LoadMyFriendsData: AbstractLoadData {
     
     var sessionConfiguration: URLSessionConfiguration
+    var realm: AbstractRealmManager
     lazy var session: URLSession = {
         return URLSession(configuration: sessionConfiguration)
     }()
     
-    required init(sessionConfiguration: URLSessionConfiguration) {
+    required init(sessionConfiguration: URLSessionConfiguration,
+                  realm: AbstractRealmManager) {
         self.sessionConfiguration = sessionConfiguration
+        self.realm = realm
     }
     
-    required convenience init() {
-        self.init(sessionConfiguration: URLSessionConfiguration.default)
+    required convenience init(realm: AbstractRealmManager) {
+        self.init(sessionConfiguration: URLSessionConfiguration.default, realm: realm)
     }
     
     func load(completionHandler: @escaping () -> Void) {
@@ -39,8 +42,7 @@ class LoadMyFriendsData: AbstractLoadData {
     }
     
     private func saveToBase(friends: [User]) {
-        guard let realmManager = RealmManager() else { return }
-        realmManager.saveCollection(friends)
+        realm.saveCollection(friends)
     }
     
     private func fetchFriendsData(completionHandler: @escaping (ApiResult<[User]>) -> Void) {

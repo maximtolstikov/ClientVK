@@ -11,28 +11,28 @@ import RealmSwift
 /// Управляет методами Realm
 struct RealmManager: AbstractRealmManager {
     
-    private let realm: Realm
+    private let realm: Realm?
     
-    init?(configuration: Realm.Configuration) {
+    init(configuration: Realm.Configuration) {
         self.realm = try! Realm(configuration: configuration)
     }
     
-    init?() {
+    init() {
         self.init(configuration: Realm.Configuration.defaultConfiguration)
-        print(realm.configuration.fileURL?.absoluteString ?? "")
+        print(realm?.configuration.fileURL?.absoluteString ?? "")
     }
     
     func loadDataBy<T: Object>(type: T.Type, predicate: NSPredicate) -> Results<T>? {
         
-            let result = realm.objects(type).filter(predicate)
+        let result = realm?.objects(type).filter(predicate)
             return result
     }
     
     func saveObject(_ object: Object) {
         
         do {
-            try realm.write {
-                realm.add(object, update: true)
+            try realm?.write {
+                realm?.add(object, update: true)
             }
         } catch (let error) {
             print(error.localizedDescription)
@@ -42,8 +42,8 @@ struct RealmManager: AbstractRealmManager {
     func saveCollection<T: Sequence>(_ objects: T) where T.Element: Object {
         
         do {
-            try realm.write {
-                realm.add(objects, update: true)
+            try realm?.write {
+                realm?.add(objects, update: true)
             }
         } catch (let error) {
             print(error.localizedDescription)
@@ -53,8 +53,8 @@ struct RealmManager: AbstractRealmManager {
     func deleteAll() {
         
         do {
-            try realm.write {
-                realm.deleteAll()
+            try realm?.write {
+                realm?.deleteAll()
             }
         } catch (let error) {
             print(error.localizedDescription)

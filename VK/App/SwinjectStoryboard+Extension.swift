@@ -11,18 +11,21 @@ import SwinjectStoryboard
 import SwinjectAutoregistration
 
 extension SwinjectStoryboard {
+    
     @objc class func setup() {
-        defaultContainer.autoregister(AbstractRealmManager.self) { _ in
-            let realm = RealmManager()!
+        defaultContainer.register(AbstractRealmManager.self) { _ in
+            let realm = RealmManager()
             return realm
         }
-        defaultContainer.autoregister(AbstractLoadData.self,
-                                      name: "myData",
-                                      initializer: LoadMyData.init)
-        defaultContainer.autoregister(AbstractLoadData.self,
-                                      name: "myFriends",
-                                      initializer: LoadMyFriendsData.init)
-        
+        defaultContainer.register(AbstractLoadData.self, name: "myData") { resolver in
+            LoadMyData(realm: resolver ~> AbstractRealmManager.self)
+        }
+        defaultContainer.register(AbstractLoadData.self, name: "myFriends") { resolver in
+            LoadMyFriendsData.init(realm: resolver ~> AbstractRealmManager.self)
+        }
+        defaultContainer.register(AbstractLoadData.self, name: "myGroups") { resolver in
+            LoadMyGroupsData.init(realm: resolver ~> AbstractRealmManager.self)
+        }
         
         defaultContainer.storyboardInitCompleted(AboutMeViewController.self) { (resolver, controler) in
             controler.realm = resolver ~> AbstractRealmManager.self
@@ -32,6 +35,11 @@ extension SwinjectStoryboard {
         defaultContainer.storyboardInitCompleted(MyFriendsTableViewController.self) { (resolver, controller) in
             controller.realm = resolver ~> AbstractRealmManager.self
             controller.service = resolver ~> (AbstractLoadData.self, name: "myFriends")
+        }
+        
+        defaultContainer.storyboardInitCompleted(MyGroupsTableViewController.self) { (resolver, controller) in
+            controller.realm = resolver ~> AbstractRealmManager.self
+            controller.service = resolver ~> (AbstractLoadData.self, name: "myGroups")
         }
 
     }

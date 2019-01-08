@@ -14,7 +14,7 @@ class AuthViewController: UIViewController {
     var apid = "6356430"
     let scope: [String] = [VK_PER_GROUPS, VK_PER_PHOTOS, VK_PER_FRIENDS]
     var isAuthorised = false
-    var myToken: VKAccessToken? = nil
+    var myToken: VKAccessToken?
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -46,8 +46,7 @@ class AuthViewController: UIViewController {
     
     func logout() {
        
-        guard let manager = RealmManager() else { return }
-        
+        let manager = RealmManager()        
         manager.deleteAll()
         VKSdk.forceLogout()
     }
