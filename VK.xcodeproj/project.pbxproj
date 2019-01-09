@@ -174,7 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				94D0AADA21D39F9C004ECBDA /* BussinessLogic */,
-				94E771C021D5559D00AE8632 /* Entitys */,
+				94E771C021D5559D00AE8632 /* Entities */,
 				94D0AAC321D353E1004ECBDA /* AppDelegate.swift */,
 				94DA7E7D21E36DAF0086C993 /* SwinjectStoryboard+Extension.swift */,
 			);
@@ -230,13 +230,13 @@
 			path = BussinessLogic;
 			sourceTree = "<group>";
 		};
-		94E771C021D5559D00AE8632 /* Entitys */ = {
+		94E771C021D5559D00AE8632 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
 				94E771BE21D548CD00AE8632 /* User.swift */,
 				94DA7E8121E3999C0086C993 /* Group.swift */,
 			);
-			path = Entitys;
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		94F656CC21E08607005D4EE3 /* MyFriends */ = {
